@@ -4,18 +4,20 @@ import '/dummy_data.dart';
 import './models/meals.dart';
 
 const DUMMY_CATEGORIES = const [
-  category(id: 'c1', title: 'veg', color: Colors.purple),
-  category(id: 'c2', title: ' Quick & Easy', color: Colors.red),
-  category(id: 'c3', title: 'Non Veg', color: Colors.orange),
-  category(id: 'c4', title: 'Quick Surve', color: Colors.green),
-  category(id: 'c5', title: 'Breakfast', color: Colors.yellow),
-  category(id: 'c6', title: 'italian', color: Colors.pink),
-  category(id: 'c6', title: 'chinese', color: Colors.brown),
-  category(id: 'c7', title: 'Good food', color: Colors.blueGrey),
-  category(id: 'c8', title: 'German', color: Colors.purpleAccent),
-  category(id: 'c9', title: 'Lunch', color: Colors.greenAccent),
-  category(id: 'c10', title: 'Healthy Food', color: Colors.amber),
-  category(id: 'c11', title: 'Russian', color: Colors.black87),
+  category(
+      id: 'c1', title: 'italian', color: Color.fromARGB(255, 222, 166, 232)),
+  category(
+      id: 'c2',
+      title: ' Quick & Easy',
+      color: Color.fromARGB(255, 214, 121, 115)),
+  category(id: 'c3', title: 'Hamburgers', color: Colors.orange),
+  category(id: 'c4', title: 'German', color: Colors.green),
+  category(id: 'c5', title: 'Light & Lovely', color: Colors.yellow),
+  category(id: 'c6', title: 'Exotic', color: Colors.pink),
+  category(id: 'c7', title: 'Breakfast', color: Colors.brown),
+  category(id: 'c8', title: 'Asian', color: Colors.blueGrey),
+  category(id: 'c9', title: 'French', color: Colors.purpleAccent),
+  category(id: 'c10', title: 'Summer', color: Colors.greenAccent),
 ];
 const DUMMY_MEALS = const [
   Meals(

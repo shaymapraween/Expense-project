@@ -13,7 +13,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  List<Map<String, Object>> _pages;
+  late List<Map<String, Object>> _pages;
   int _selectedPageindex = 0;
   @override
   void initState() {

@@ -13,8 +13,8 @@ class CategoryMealsScreen extends StatefulWidget {
 }
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
-  late String categoryTitle;
-  late List<Meals> displayedMeals;
+  late String categoryTitle = "";
+  late List<Meals> displayedMeals = [];
   var _loadedInitData = false;
 
   @override
@@ -30,14 +30,15 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
           ModalRoute.of(context)!.settings.arguments as Map<String, String>;
 
       print("routesArg: $routeArgs");
-
+      //set initial state value
+      categoryTitle = routeArgs['title'] ?? '';
       final categoryId = routeArgs['id'] ?? '';
-      final categoryTitle = routeArgs['title'] ?? '';
-      final categoryMeals = widget.avilableMeals.where((meal) {
+      displayedMeals = widget.avilableMeals.where((meal) {
         return meal.categories.contains(categoryId);
       }).toList();
       _loadedInitData = true;
     }
+
     super.didChangeDependencies();
   }
 

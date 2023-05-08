@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import '../screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
-  Widget buildListTile(String title, IconData icon, Function tapHandler) {
+  const MainDrawer({Key? key});
+
+  Widget buildListTile(String title, IconData icon, Function() tapHandler) {
     return ListTile(
       leading: Icon(
         icon,
@@ -13,7 +15,7 @@ class MainDrawer extends StatelessWidget {
         title,
         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
-      onTap: tapHandler(),
+      onTap: tapHandler,
     );
   }
 
@@ -29,12 +31,13 @@ class MainDrawer extends StatelessWidget {
             alignment: Alignment.centerLeft,
             color: Theme.of(context).colorScheme.secondary,
             child: Text(
-              'Coocking up!',
+              'Cooking up!',
               style: GoogleFonts.lato(
-                  textStyle: Theme.of(context).textTheme.headlineMedium,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                  fontStyle: FontStyle.italic),
+                textStyle: Theme.of(context).textTheme.headline6,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+                fontStyle: FontStyle.italic,
+              ),
             ),
           ),
           SizedBox(
